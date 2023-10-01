@@ -62,6 +62,7 @@
 
         #slogan {
             padding-left: 10;
+            font-weight: 900;
         }
 
         #slogan:visited {
@@ -120,20 +121,21 @@
         .main {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 400px 400px;
+            grid-template-rows: 35vh 35vh;
             row-gap: 20px;
             column-gap: 20px;
             margin: 50px 150px 50px 150px;
 
         }
 
-        .main-grid-item>div>a {
+        .main-grid-header {
             display: flex;
+            height: 23px;
         }
 
-        .board-logo {
-            flex: 1;
-        }
+        /* .main-grid-item hr {
+            width: 100px;
+        } */
 
         .viewMore-image {
             display: inline-block;
@@ -145,51 +147,227 @@
 
         .main-grid-item:nth-of-type(1) {
             grid-column: 1 / 3;
-            grid-row: 1 / 2;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-auto-rows: minmax(100px, auto);
+            /* display: grid; */
+            /* grid-template-columns: 1fr;
+            grid-auto-rows: minmax(100px, auto); */
         }
 
         .main-grid-item:nth-of-type(2) {
-            display: grid;
+            /* display: grid; */
             grid-template-columns: 1fr;
             grid-auto-rows: minmax(100px, auto);
         }
 
         .main-grid-item:nth-of-type(3) {
-            display: grid;
+            /* display: grid; */
             grid-template-columns: 1fr;
             grid-auto-rows: minmax(100px, auto);
 
         }
+
+        .inner-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: 5vh;
+            align-items: center;
+        }
+
+        .horizontal-line {
+            border: none;
+            height: 1px;
+            background-color: #000000;
+            /* 원하는 색상으로 변경 가능 */
+
+        }
+
+        .inner-grid>a {
+            display: flex;
+        }
+
+        .inner-grid>a>span:nth-child(1) {
+            border-right: medium solid black;
+        }
+
+        .inner-grid>a>span:nth-child(2) {
+            flex: 1;
+            padding-left: 10px;
+        }
+
+        .eye {
+            background-image: url(../Image/eye.png);
+            width: 18px;
+            height: 15px;
+            background-size: cover;
+        }
+
+        .thumb {
+            background-image: url(../Image/thumb.png);
+            width: 18px;
+            height: 18px;
+            background-size: cover;
+        }
+
+        .comments {
+            background-image: url(../Image/comments.png);
+            width: 18px;
+            height: 16px;
+            background-size: cover;
+        }
+
+        .board-logo-hot {
+            display: inline-block;
+            background-image: url(../Image/hot.png);
+            width: 18px;
+            height: 16px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .board-logo-market {
+            display: inline-block;
+            background-image: url(../Image/market.png);
+            width: 18px;
+            height: 16px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .board-logo-event {
+            display: inline-block;
+            background-image: url(../Image/event.png);
+            width: 18px;
+            height: 16px;
+            background-size: cover;
+            background-position: center;
+        }
     </style>
     <div class="main">
         <div class="main-grid-item">
-            <div>
+            <div class="main-grid-header">
                 <a href="#">
-                    <span class="board-logo">인기</span>
+                    <span><i class="board-logo-hot"></i>인기</span>
+                </a>
+                <div style="flex: 1; height: 15px;"></div>
+                <a href="#">
+                    <span class="viewMore"><i class="viewMore-image"></i>더보기</span>
+                </a>
+
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="inner-grid">
+                <a href="#">
+                    <span>카테고리</span>
+                    <span>제목</span>
+                    <span class="eye"></span>
+                    <span>조회수</span>
+                    <span class="thumb"></span>
+                    <span>좋아요</span>
+                    <span class="comments"></span>
+                    <span>댓글 수</span>
+                </a>
+                <a href="#"><span>카테고리</span>
+                    <span>제목</span>
+                    <span class="eye"></span>
+                    <span>조회수</span>
+                    <span class="thumb"></span>
+                    <span>좋아요</span>
+                    <span class="comments"></span>
+                    <span>댓글 수</span>
+                </a>
+                <a href="#"><span>카테고리</span>
+                    <span>제목</span>
+                    <span class="eye"></span>
+                    <span>조회수</span>
+                    <span class="thumb"></span>
+                    <span>좋아요</span>
+                    <span class="comments"></span>
+                    <span>댓글 수</span>
+                </a>
+            </div>
+
+        </div>
+        <div class="main-grid-item">
+            <div class="main-grid-header">
+                <a href="#">
+                    <span><i class="board-logo-market"></i>중고거래</span>
+                </a>
+                <div style="flex: 1;"></div>
+                <a href="#">
                     <span class="viewMore"><i class="viewMore-image"></i>더보기</span>
                 </a>
             </div>
-        </div>
-        <div class="main-grid-item">
-            <div>
+            <div class="horizontal-line"></div>
+            <div class="inner-grid">
                 <a href="#">
-
-                    <span class="board-logo">중고거래</span>
-                    <span class="viewMore"><i class="viewMore-image"></i>더보기</span>
-
+                    <span>카테고리</span>
+                    <span>제목</span>
+                    <span class="eye"></span>
+                    <span>조회수</span>
+                    <span class="thumb"></span>
+                    <span>좋아요</span>
+                    <span class="comments"></span>
+                    <span>댓글 수</span>
+                </a>
+                <a href="#"><span>카테고리</span>
+                    <span>제목</span>
+                    <span class="eye"></span>
+                    <span>조회수</span>
+                    <span class="thumb"></span>
+                    <span>좋아요</span>
+                    <span class="comments"></span>
+                    <span>댓글 수</span>
+                </a>
+                <a href="#"><span>카테고리</span>
+                    <span>제목</span>
+                    <span class="eye"></span>
+                    <span>조회수</span>
+                    <span class="thumb"></span>
+                    <span>좋아요</span>
+                    <span class="comments"></span>
+                    <span>댓글 수</span>
                 </a>
             </div>
+
         </div>
         <div class="main-grid-item">
-            <div>
+            <div class="main-grid-header">
                 <a href="#">
-
-                    <span class="board-logo">이벤트</span>
+                    <span><i class="board-logo-event"></i>이벤트</span>
+                </a>
+                <div style="flex: 1;"></div>
+                <a href="#">
                     <span class="viewMore"><i class="viewMore-image"></i>더보기</span>
-
+                </a>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="inner-grid">
+                <a href="#">
+                    <span>카테고리</span>
+                    <span>제목</span>
+                    <span class="eye"></span>
+                    <span>조회수</span>
+                    <span class="thumb"></span>
+                    <span>좋아요</span>
+                    <span class="comments"></span>
+                    <span>댓글 수</span>
+                </a>
+                <a href="#"><span>카테고리</span>
+                    <span>제목</span>
+                    <span class="eye"></span>
+                    <span>조회수</span>
+                    <span class="thumb"></span>
+                    <span>좋아요</span>
+                    <span class="comments"></span>
+                    <span>댓글 수</span>
+                </a>
+                <a href="#"><span>카테고리</span>
+                    <span>제목</span>
+                    <span class="eye"></span>
+                    <span>조회수</span>
+                    <span class="thumb"></span>
+                    <span>좋아요</span>
+                    <span class="comments"></span>
+                    <span>댓글 수</span>
                 </a>
             </div>
         </div>
@@ -202,12 +380,11 @@
             height: 90px;
         }
     </style>
-    <footer> <!-- 높이 90 마진바텀 30-->
+    <footer><!-- 높이 90 마진바텀 30-->
         <div>
 
         </div>
     </footer>
-
 </body>
 
 </html>
