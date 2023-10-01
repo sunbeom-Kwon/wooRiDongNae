@@ -120,14 +120,14 @@
         .main {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 400px 400px;
             row-gap: 20px;
             column-gap: 20px;
             margin: 50px 150px 50px 150px;
 
         }
 
-        .main-grid-item>a>div {
+        .main-grid-item>div>a {
             display: flex;
         }
 
@@ -164,43 +164,49 @@
 
         }
     </style>
-    <>
-        <div class="main">
-            <div class="main-grid-item">
-                <div>
-                    <a href="#">
-                        <span class="board-logo">인기</span>
-                        <span class="viewMore"><i class="viewMore-image"></i>더보기</span>
-                    </a>
-                </div>
-            </div>
-            <div class="main-grid-item">
-                <div>
-                    <a href="#">
-
-                        <span class="board-logo">중고거래</span>
-                        <span class="viewMore"><i class="viewMore-image"></i>더보기</span>
-
-                    </a>
-                </div>
-            </div>
-            <div class="main-grid-item">
-                <div>
-                    <a href="#">
-
-                        <span class="board-logo">이벤트</span>
-                        <span class="viewMore"><i class="viewMore-image"></i>더보기</span>
-
-                    </a>
-                </div>
+    <div class="main">
+        <div class="main-grid-item">
+            <div>
+                <a href="#">
+                    <span class="board-logo">인기</span>
+                    <span class="viewMore"><i class="viewMore-image"></i>더보기</span>
+                </a>
             </div>
         </div>
-        </main>
-        <footer>
+        <div class="main-grid-item">
             <div>
+                <a href="#">
 
+                    <span class="board-logo">중고거래</span>
+                    <span class="viewMore"><i class="viewMore-image"></i>더보기</span>
+
+                </a>
             </div>
-        </footer>
+        </div>
+        <div class="main-grid-item">
+            <div>
+                <a href="#">
+
+                    <span class="board-logo">이벤트</span>
+                    <span class="viewMore"><i class="viewMore-image"></i>더보기</span>
+
+                </a>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <style>
+        footer>div {
+            margin-top: 30px;
+            height: 90px;
+        }
+    </style>
+    <footer> <!-- 높이 90 마진바텀 30-->
+        <div>
+
+        </div>
+    </footer>
 
 </body>
 
