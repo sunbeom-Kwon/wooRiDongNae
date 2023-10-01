@@ -1,0 +1,7 @@
+{
+    "host": "localhost",
+    "user": "root",
+    "password": "170628",
+    "database": "ksun",
+    "debug":false
+}

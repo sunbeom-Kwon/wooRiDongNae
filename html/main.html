@@ -1,0 +1,206 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리 동네 대동 단결</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html body {
+            margin: 0;
+            padding: 0;
+            font-family: Dotum, '돋움', Helvetica, "Apple SD Gothic Neo", sans-serif;
+        }
+
+        span,
+        a {
+            color: black;
+
+        }
+
+        a {
+            text-decoration-line: none;
+        }
+
+        header {
+            margin-top: 30px;
+        }
+
+        .blind {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            white-space: nowrap;
+        }
+
+        header>div {
+            display: flex;
+            align-items: center;
+            background-color: rgb(189, 189, 189);
+            /* align-items: center; */
+            margin: 0px 100px;
+        }
+
+        #logo {
+            /* background-color: black; */
+            width: 100px;
+            height: 100px;
+            background-image: url(../Image/logo.png);
+            background-size: cover;
+
+        }
+
+        #slogan {
+            padding-left: 10;
+        }
+
+        #slogan:visited {
+            color: inherit;
+        }
+
+        #login-button {
+            display: flex;
+            margin-right: 100px;
+            width: 85px;
+            height: 85px;
+            background-color: rgba(93, 93, 93, 0.5);
+            color: black;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #address {
+            height: 100%;
+            background: none;
+            text-decoration: none;
+            padding-left: 10px;
+            border: none;
+        }
+
+        #address-dropdown {
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            background-image: url(../Image/tri2.png);
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="#">
+                <div id="logo">
+                    <span class="blind">로고</span>
+                </div>
+            </a>
+            <a href="#" id="slogan">
+                <span>우리 동네 대동단결</span>
+            </a>
+            <button id="address"><span>주소</span><i id="address-dropdown"></i></button>
+            <div style="flex: 1;"></div>
+            <a href="#" id="login-button">
+                <span>로그인</span>
+            </a>
+        </div>
+    </header>
+    <style>
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 20px;
+            column-gap: 20px;
+            margin: 50px 150px 50px 150px;
+
+        }
+
+        .main-grid-item>a>div {
+            display: flex;
+        }
+
+        .board-logo {
+            flex: 1;
+        }
+
+        .viewMore-image {
+            display: inline-block;
+            width: 14px;
+            height: 15px;
+            background-image: url(../Image/pigeon.png);
+            background-size: cover;
+        }
+
+        .main-grid-item:nth-of-type(1) {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        .main-grid-item:nth-of-type(2) {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        .main-grid-item:nth-of-type(3) {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(100px, auto);
+
+        }
+    </style>
+    <main>
+        <div class="main">
+            <div class="main-grid-item">
+                <div>
+                    <a href="#">
+                        <span class="board-logo">인기</span>
+                        <span class="viewMore"><i class="viewMore-image"></i>더보기</span>
+                    </a>
+                </div>
+                <div class="main-grid-item">
+                    <div>
+                        <a href="#">
+
+                            <span class="board-logo">중고거래</span>
+                            <span class="viewMore"><i class="viewMore-image"></i>더보기</span>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="main-grid-item">
+                    <div>
+                        <a href="#">
+
+                            <span class="board-logo">이벤트</span>
+                            <span class="viewMore"><i class="viewMore-image"></i>더보기</span>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <footer>
+        <div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
